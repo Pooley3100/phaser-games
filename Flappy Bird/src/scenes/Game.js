@@ -144,6 +144,7 @@ export default class Game extends Phaser.Scene {
 
         this.input.on('pointerdown', pointer => {
             this.player.setVelocityY(-100);
+            this.player.rotation = - Phaser.Math.PI2 / 8;
             if (this.gameOver) {
                 this.updateServer();
                 this.scene.restart();
