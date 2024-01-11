@@ -14,5 +14,8 @@ export default new Phaser.Game({
             },
             debug  : false
         }
+    },
+    scale: {
+        mode: Phaser.Scale.FIT
     }
 })
