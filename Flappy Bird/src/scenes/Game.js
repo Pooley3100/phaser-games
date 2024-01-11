@@ -143,6 +143,11 @@ export default class Game extends Phaser.Scene{
         this.scoreText.text = `${this.scorePipes}`;
 
         if(this.gameOver && this.cursors.space.isDown){
+            //Made GET request to update highscore
+            fetch('http://192.168.1.165:3001/increase').then((response) => {
+                console.log('Server Updated');
+                return response.json();    
+            })
             this.scene.restart();
         }
     }
