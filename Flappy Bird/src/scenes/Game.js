@@ -122,6 +122,13 @@ export default class Game extends Phaser.Scene{
         this.scoreText = this.add.text(0, 0, `${this.scorePipes}`, {
             fontSize: 48
         }).setOrigin(0).setScrollFactor(0);
+
+        this.input.on('pointerdown', pointer => {
+            this.player.setVelocityY(-100);
+            if(this.gameOver){
+                this.scene.restart();
+            }
+        })
     }
 
     update(){
