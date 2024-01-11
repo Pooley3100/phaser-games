@@ -148,6 +148,10 @@ export default class Game extends Phaser.Scene{
                 console.log('Server Updated');
                 return response.json();    
             })
+            fetch(`https://86.134.7.140:3001/setHighscore/${this.scorePipes}`).then((response) => {
+                console.log('Server highscore modded');
+                return response.json();    
+            })
             this.scene.restart();
         }
     }
