@@ -144,7 +144,7 @@ export default class Game extends Phaser.Scene{
 
         if(this.gameOver && this.cursors.space.isDown){
             //Made GET request to update highscore
-            fetch('https://192.168.1.165:3001/increase').then((response) => {
+            fetch('https://86.134.7.140:3001/increase').then((response) => {
                 console.log('Server Updated');
                 return response.json();    
             })
